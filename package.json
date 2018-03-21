@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "prez --watch --serve",
-    "build": "prez --print --no-open-browser --print-notes"
+    "build": "prez --print --no-open-browser --print-notes",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "phantomjs-prebuilt": "^2.1.13",
-    "prez": "chrisns/prez#973a69d524ab24783e78f411237bbf2c1fcd04d9"
-  }
+    "prez": "chrisns/prez#973a69d524ab24783e78f411237bbf2c1fcd04d9",
+    "snyk": "^1.70.2"
+  },
+  "snyk": true
 }
